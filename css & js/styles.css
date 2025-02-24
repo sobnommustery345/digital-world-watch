@@ -1,0 +1,235 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif; /* Clean, modern font */
+}
+
+/* Body Styles */
+body {
+    min-height: 100vh;
+    background-color: #191427; /* Dark background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Main Container Styles */
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Search Container Styles */
+.search-container {
+    width: 100%;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+/* Search Icon Styles */
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 55%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+/* Search Input Styles */
+#searchInput {
+    width: 100%;
+    padding: 12px 40px;
+    background: rgba(90, 89, 89, 0.733); /* Slight transparency for style */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+#searchInput::placeholder {
+    color: #e9c9c9af;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(64, 224, 208, 0.5); /* Highlight on focus */
+}
+
+/* Search Results Styles */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10;
+}
+
+.search-results button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.search-results button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Clock Container Styles */
+.clock-container {
+    background: rgba(0, 0, 0, 0.1);
+    background-color: #b36363;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Clock Display Styles */
+.clock {
+    background: black;
+    border: 2px solid #00ff34;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.time {
+    font-size: 3.3rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: #db09ff;
+    text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+    line-height: 1;
+}
+
+.ampm {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: #db09ff;
+    text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+    margin-top: 0.5rem;
+}
+
+.date {
+    font-size: 1.25rem;
+    color: #40E0D0;
+    text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+    margin-top: 1rem;
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .time {
+        font-size: 3rem;
+    }
+    
+    .ampm {
+        font-size: 1.5rem;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .clock-container {
+        padding: 1rem;
+    }
+    
+    .clock {
+        padding: 1.5rem;
+    }
+    
+    .time {
+        font-size: 2.5rem;
+    }
+    
+    .ampm {
+        font-size: 1.25rem;
+    }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 298px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .clock-container {
+        padding: 1rem;
+    }
+    
+    .clock {
+        padding: 1.5rem;
+    }
+    
+    .time {
+        font-size: 1.8rem;
+        font-weight: bolder;
+    }
+    
+    .ampm {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design for Ultra Small Screens */
+@media (max-width: 238px) {
+    h1 {
+        font-size: 1rem;
+    }
+    
+    .clock-container {
+        padding: 1rem;
+    }
+    
+    .clock {
+        padding: 1.5rem;
+    }
+    
+    .time {
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    
+    .ampm {
+        font-size: 0.8rem;
+    }
+}
